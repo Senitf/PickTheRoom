@@ -1,3 +1,8 @@
 from django.db import models
 
-# Create your models here.
+class Condition(models.Model):
+    distance = models.IntegerField()
+    price = models.IntegerField()
+    traffic = models.IntegerField()
+    facility = models.IntegerField()
+    usability = models.IntegerField()
