@@ -1,0 +1,23 @@
+{% extends "base_generic.html" %}
+
+{% block content %}
+    <form action="" method="post">
+        {% csrf_token %}
+        <label for="distance">거리</label>
+        <input type="range" name="distance" id="distance" min="0" max="5" value="0">
+        <br>
+        <label for="price">가격</label>
+        <input type="range" name="price" id="price" min="0" max="5" value="0">
+        <br>
+        <label for="traffic">교통</label>
+        <input type="range" name="traffic" id="traffic" min="0" max="5" value="0">
+        <br>
+        <label for="facility">상업시설</label>
+        <input type="range" name="facility" id="facility" min="0" max="5" value="0">
+        <br>
+        <label for="usability">편의성</label>
+        <input type="range" name="usability" id="usability" min="0" max="5" value="0">
+        <br>
+        <button type="submit">검색</button>
+    </form>
+{% endblock %}

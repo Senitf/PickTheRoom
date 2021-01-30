@@ -1,0 +1,20 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+    <title>따라란</title>
+</head>
+<body>
+    {% block navbar %}
+    <nav>
+        <a href="{% url 'index' %}">로그인</a>
+        <a href="{% url 'index' %}">회원가입</a>
+    </nav>
+    {% endblock %}
+    {% block content %}
+    {% endblock %}
+</body>
+</html>

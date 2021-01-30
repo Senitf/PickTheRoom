@@ -1,5 +1,6 @@
-# Created by https://www.toptal.com/developers/gitignore/api/python,django,react,vscode
-# Edit at https://www.toptal.com/developers/gitignore?templates=python,django,react,vscode
+
+# Created by https://www.toptal.com/developers/gitignore/api/vscode,python,django
+# Edit at https://www.toptal.com/developers/gitignore?templates=vscode,python,django
 
 ### Django ###
 *.log
@@ -210,27 +211,15 @@ dmypy.json
 
 # profiling data
 
-### react ###
-.DS_*
-logs
-**/*.backup.*
-**/*.back.*
-
-node_modules
-bower_components
-
-*.sublime*
-
-psd
-thumb
-sketch
-
 ### vscode ###
-**/.vscode/
+.vscode/*
 !.vscode/settings.json
 !.vscode/tasks.json
 !.vscode/launch.json
 !.vscode/extensions.json
 *.code-workspace
 
-# End of https://www.toptal.com/developers/gitignore/api/python,django,react,vscode
+### prettier ###
+.prettierignore
+
+# End of https://www.toptal.com/developers/gitignore/api/vscode,python,django

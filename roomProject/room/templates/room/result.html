@@ -1,0 +1,11 @@
+{% extends "base_generic.html" %}
+
+{% block content %}
+    <ul>
+        <li>거리: {{ result.distance }}</li>
+        <li>가격: {{ result.price }}</li>
+        <li>교통: {{ result.traffic }}</li>
+        <li>상업시설: {{ result.facility }}</li>
+        <li>편의성: {{ result.usability }}</li>
+    </ul>
+{% endblock %}
