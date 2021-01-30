@@ -1,23 +1,102 @@
-{% extends "base_generic.html" %}
-
-{% block content %}
+{% extends "base_generic.html" %} {% block content %}
+<div class="search-container mt-5 p-3 mx-auto border border-dark border-4">
     <form action="" method="post">
         {% csrf_token %}
-        <label for="distance">거리</label>
-        <input type="range" name="distance" id="distance" min="0" max="5" value="0">
-        <br>
-        <label for="price">가격</label>
-        <input type="range" name="price" id="price" min="0" max="5" value="0">
-        <br>
-        <label for="traffic">교통</label>
-        <input type="range" name="traffic" id="traffic" min="0" max="5" value="0">
-        <br>
-        <label for="facility">상업시설</label>
-        <input type="range" name="facility" id="facility" min="0" max="5" value="0">
-        <br>
-        <label for="usability">편의성</label>
-        <input type="range" name="usability" id="usability" min="0" max="5" value="0">
-        <br>
-        <button type="submit">검색</button>
+        <div class="row justify-content-center mb-2">
+            <div class="name-text col-3 mx-0 px-0 fs-1 text-end">김미진</div>
+            <div class="col-2 mx-0 px-0 pt-3">님의 pick</div>
+        </div>
+        <p class="help-text">더 중요하게 생각하는 조건을 슬라이드 해주세요.</p>
+        <div class="row mb-2">
+            <div class="col-4 fs-5">
+                <label for="distance">거리<i class="far fa-question-circle ms-2"></i></label>
+            </div>
+            <div class="col-8">
+                <input
+                    type="range"
+                    name="distance"
+                    id="distance"
+                    min="0"
+                    max="5"
+                    value="0"
+                    class="form-range"
+                />
+            </div>
+        </div>
+
+        <div class="row mb-2">
+            <div class="col-4 fs-5">
+                <label for="price">가격<i class="far fa-question-circle ms-2"></i></label>
+            </div>
+            <div class="col-8">
+                <input
+                    type="range"
+                    name="price"
+                    id="price"
+                    min="0"
+                    max="5"
+                    value="0"
+                    class="form-range"
+                />
+            </div>
+        </div>
+
+        <div class="row mb-2">
+            <div class="col-4 fs-5">
+                <label for="traffic">교통<i class="far fa-question-circle ms-2"></i></label>
+            </div>
+            <div class="col-8">
+                <input
+                    type="range"
+                    name="traffic"
+                    id="traffic"
+                    min="0"
+                    max="5"
+                    value="0"
+                    class="form-range"
+                />
+            </div>
+        </div>
+
+        <div class="row mb-2">
+            <div class="col-4 fs-5">
+                <label for="facility">상업시설<i class="far fa-question-circle ms-2"></i></label>
+            </div>
+            <div class="col-8">
+                <input
+                    type="range"
+                    name="facility"
+                    id="facility"
+                    min="0"
+                    max="5"
+                    value="0"
+                    class="form-range"
+                />
+            </div>
+        </div>
+
+        <div class="row mb-2">
+            <div class="col-4 fs-5">
+                <label for="usability">편의성<i class="far fa-question-circle ms-2"></i></label>
+            </div>
+            <div class="col-8">
+                <input
+                    type="range"
+                    name="usability"
+                    id="usability"
+                    min="0"
+                    max="5"
+                    value="0"
+                    class="form-range"
+                />
+            </div>
+        </div>
+
+        <div class="row justify-content-end">
+            <div class="col-3">
+                <button type="submit" class="btn btn-outline-primary">SEARCH</button>
+            </div>
+        </div>
     </form>
+</div>
 {% endblock %}
