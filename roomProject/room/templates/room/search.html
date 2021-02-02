@@ -1,15 +1,22 @@
-{% extends "base_generic.html" %} {% block content %}
-<div class="search-container mt-5 p-3 mx-auto border border-dark border-4">
+{% extends "base_generic.html" %}
+{% block content %}
+<div class="search-container mt-5 px-5 py-3 mx-auto border border-dark border-4">
     <form action="" method="post">
         {% csrf_token %}
         <div class="row justify-content-center mb-2">
             <div class="name-text col-3 mx-0 px-0 fs-1 text-end">김미진</div>
-            <div class="col-2 mx-0 px-0 pt-3">님의 pick</div>
+            <div class="col-3 mx-0 ps-1 pe-0 pt-3">님의 pick</div>
         </div>
         <p class="help-text">더 중요하게 생각하는 조건을 슬라이드 해주세요.</p>
         <div class="row mb-2">
             <div class="col-4 fs-5">
-                <label for="distance">거리<i class="far fa-question-circle ms-2"></i></label>
+                <label for="distance">
+                    거리<i
+                        id="popover1"
+                        class="far fa-question-circle ms-2"
+                        data-bs-content="거리..중요하죠...여기에 무엇을 적어야할까요?ㅎ">
+                    </i>
+                </label>
             </div>
             <div class="col-8">
                 <input
@@ -26,7 +33,13 @@
 
         <div class="row mb-2">
             <div class="col-4 fs-5">
-                <label for="price">가격<i class="far fa-question-circle ms-2"></i></label>
+                <label for="price">
+                    가격<i
+                        id="popover2"
+                        class="far fa-question-circle ms-2"
+                        data-bs-content="머니머니해도 머니">
+                    </i>
+                </label>
             </div>
             <div class="col-8">
                 <input
@@ -43,7 +56,13 @@
 
         <div class="row mb-2">
             <div class="col-4 fs-5">
-                <label for="traffic">교통<i class="far fa-question-circle ms-2"></i></label>
+                <label for="traffic">
+                    교통<i
+                    id="popover3"
+                    class="far fa-question-circle ms-2"
+                    data-bs-content="라떼는 말이야..엠티 한 번 갈려하면 버정에서 30분을 기다렸다~~ 이 말이야~~">
+                    </i>
+                </label>
             </div>
             <div class="col-8">
                 <input
@@ -60,7 +79,13 @@
 
         <div class="row mb-2">
             <div class="col-4 fs-5">
-                <label for="facility">상업시설<i class="far fa-question-circle ms-2"></i></label>
+                <label for="facility">
+                    상업시설<i
+                    id="popover4"
+                    class="far fa-question-circle ms-2"
+                    data-bs-content="주변에 편의점이 없다면? 그것은 재.앙.이.다">
+                    </i>
+                </label>
             </div>
             <div class="col-8">
                 <input
@@ -77,7 +102,13 @@
 
         <div class="row mb-2">
             <div class="col-4 fs-5">
-                <label for="usability">편의성<i class="far fa-question-circle ms-2"></i></label>
+                <label for="usability">
+                    편의성<i
+                    id="popover5"
+                    class="far fa-question-circle ms-2"
+                    data-bs-content="편리함을 추구하는 당신 효율성을 따지는 type★">
+                    </i>
+                </label>
             </div>
             <div class="col-8">
                 <input
@@ -94,9 +125,49 @@
 
         <div class="row justify-content-end">
             <div class="col-3">
-                <button type="submit" class="btn btn-outline-primary">SEARCH</button>
+                <button type="submit" class="btn btn-lg btn-outline-primary">SEARCH</button>
             </div>
         </div>
     </form>
 </div>
+{% endblock %}
+
+{% block script %}
+<script>
+    var popover1 = new bootstrap.Popover(document.getElementById('popover1'), {
+        trigger: 'hover',
+        container: 'body',
+        toggle: 'popover',
+        trigger: 'hover',
+        placement: 'right',
+    });
+    var popover2 = new bootstrap.Popover(document.getElementById('popover2'), {
+        trigger: 'hover',
+        container: 'body',
+        toggle: 'popover',
+        trigger: 'hover',
+        placement: 'right',
+    });
+    var popover3 = new bootstrap.Popover(document.getElementById('popover3'), {
+        trigger: 'hover',
+        container: 'body',
+        toggle: 'popover',
+        trigger: 'hover',
+        placement: 'right',
+    });
+    var popover4 = new bootstrap.Popover(document.getElementById('popover4'), {
+        trigger: 'hover',
+        container: 'body',
+        toggle: 'popover',
+        trigger: 'hover',
+        placement: 'right',
+    });
+    var popover5 = new bootstrap.Popover(document.getElementById('popover5'), {
+        trigger: 'hover',
+        container: 'body',
+        toggle: 'popover',
+        trigger: 'hover',
+        placement: 'right',
+    });
+</script>
 {% endblock %}

@@ -17,7 +17,7 @@ html,
 body {
     margin: 0;
     height: 100%;
-    overflow: hidden;
+    overflow: auto;
 }
 
 /* Navbar */
@@ -62,7 +62,7 @@ body {
 .search-container {
     background-color: #ffffff;
     opacity: 0.8;
-    width: 75%;
+    width: 70%;
     border-radius: 30px;
 }
 
