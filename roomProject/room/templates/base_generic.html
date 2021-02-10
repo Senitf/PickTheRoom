@@ -17,21 +17,33 @@
             crossorigin="anonymous"
         />
         <link rel="stylesheet" href="{% static 'css/styles.css' %}" />
-        <title>따라란</title>
+        <title>숙소추천</title>
     </head>
     <body style="background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(../../static/image/background-img2.jpg); background-size: cover;">
         {% block navbar %}
-        <nav class="navbar navbar-expand navbar-light p-3" style="background-color: rgba(255, 255, 255, 0.35)">
+        <nav class="navbar navbar-expand navbar-light p-2" style="background-color: rgba(255, 255, 255, 0.35)">
+            <a class="navbar-brand nav-link" href="{% url 'room:index' %}">
+                Home
+            </a>
             <div class="container-fluid justify-content-end">
                 <ul class="navbar-nav">
+                    {% if user.is_authenticated %}
+                        <li class="nav-item">
+                            <a class="login nav-link" href="{% url 'accounts:logout' %}">
+                                Logout
+                                <i class="fas fa-sign-out-alt"></i>
+                            </a>
+                        </li>
+                    {% else %}
+                        <li class="nav-item">
+                            <a class="login nav-link" href="{% url 'accounts:login' %}">
+                                Login
+                                <i class="fas fa-sign-in-alt"></i>
+                            </a>
+                        </li>
+                    {% endif %}
                     <li class="nav-item">
-                        <a class="login nav-link fs-4" href="{% url 'index' %}">
-                            로그인
-                            <i class="fas fa-sign-in-alt"></i>
-                        </a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link fs-4" href="{% url 'index' %}">
+                        <a class="scrap nav-link" href="{% url 'room:scrap' %}">
                             <i class="fas fa-star"></i>
                         </a>
                     </li>
@@ -39,6 +51,7 @@
             </div>
         </nav>
         {% endblock %}
+
         {% block content %}
         {% endblock %}
 
@@ -47,6 +60,7 @@
             integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW"
             crossorigin="anonymous"
         ></script>
+        
         {% block script %}
         {% endblock %}
     </body>

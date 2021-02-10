@@ -1,16 +1,62 @@
 @font-face {
-    font-family: 'KOTRA_BOLD-Bold';
-    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-10-21@1.1/KOTRA_BOLD-Bold.woff')
-        format('woff');
-    font-weight: normal;
-    font-style: normal;
+    font-family: 'S-Core Dream';
+    src: url('../fonts/SCDream1.otf');
+    font-weight: 100;
+}
+
+@font-face {
+    font-family: 'S-Core Dream';
+    src: url('../fonts/SCDream2.otf');
+    font-weight: 200;
+}
+
+@font-face {
+    font-family: 'S-Core Dream';
+    src: url('../fonts/SCDream3.otf');
+    font-weight: 300;
+}
+
+@font-face {
+    font-family: 'S-Core Dream';
+    src: url('../fonts/SCDream4.otf');
+    font-weight: 400;
+}
+
+@font-face {
+    font-family: 'S-Core Dream';
+    src: url('../fonts/SCDream5.otf');
+    font-weight: 500;
+}
+
+@font-face {
+    font-family: 'S-Core Dream';
+    src: url('../fonts/SCDream6.otf');
+    font-weight: 600;
+}
+
+@font-face {
+    font-family: 'S-Core Dream';
+    src: url('../fonts/SCDream7.otf');
+    font-weight: 700;
+}
+
+@font-face {
+    font-family: 'S-Core Dream';
+    src: url('../fonts/SCDream8.otf');
+    font-weight: 800;
+}
+
+@font-face {
+    font-family: 'S-Core Dream';
+    src: url('../fonts/SCDream9.otf');
+    font-weight: 900;
 }
 
 * {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
-    font-family: 'KOTRA_BOLD-Bold';
+    font-family: 'S-Core Dream', Helvetica, sans-serif;
 }
 
 html,
@@ -21,12 +67,24 @@ body {
 }
 
 /* Navbar */
-.login {
-    color: #252525;
+.navbar {
+    height: 12%;
 }
 
-.login:hover {
-    color: #464646;
+.navbar-brand {
+    font-size: 1.5rem;
+    font-weight: 800;
+    color: #444444;
+}
+
+.login {
+    font-size: 1.3rem;
+    font-weight: 600;
+}
+
+.scrap {
+    font-size: 1.3rem;
+    font-weight: 600;
 }
 
 .fa-star {
@@ -34,13 +92,14 @@ body {
 }
 
 .fa-star:hover {
-    color: rgb(236, 172, 9);
+    color: goldenrod;
 }
 
 /* index */
 .home-text {
     color: #ffffff;
     font-size: 3rem;
+    font-weight: 800;
     position: absolute;
     top: 30%;
     left: 15%;
@@ -48,7 +107,7 @@ body {
 
 .search-btn {
     font-size: 1.2rem;
-    font-weight: 600;
+    font-weight: 800;
     position: absolute;
     bottom: 30%;
     left: 15%;
@@ -59,17 +118,54 @@ body {
 }
 
 /* search */
+.wrapper {
+    width: 100%;
+    height: 88%;
+}
+
 .search-container {
     background-color: #ffffff;
     opacity: 0.8;
     width: 70%;
     border-radius: 30px;
+    padding: 3% 6% 2% 6%;
+}
+
+@media (max-width: 768px) {
+    .search-container {
+        background-color: #ffffff;
+        opacity: 0.8;
+        width: 90%;
+        border-radius: 30px;
+        padding: 3% 6% 2% 6%;
+    }
+}
+
+.name {
+    color: #052f78;
+    font-size: 2rem;
+    font-weight: 800;
 }
 
 .name-text {
-    color: #052f78;
+    font-size: 1.3rem;
+    font-weight: 400;
 }
 
 .help-text {
     color: #444444;
+    font-weight: 600;
+}
+
+.search-label {
+    font-size: 1.2rem;
+}
+
+/* accounts */
+.accounts-container {
+    background-color: #ffffff;
+    opacity: 0.8;
+    width: 450px;
+    border-radius: 30px;
+    padding: 30px 50px;
 }

@@ -1,6 +1,7 @@
-{% extends "base_generic.html" %} {% block content %}
+{% extends "base_generic.html" %}
+{% block content %}
 <div class="home-text">당신에게 딱 맞는<br />숙소 추천</div>
-<a href="{% url 'search' %}" class="search-btn btn btn-light">
+<a href="{% url 'room:search' %}" class="search-btn btn btn-light">
     검색하러 가기 <i class="fas fa-search"></i>
 </a>
 {% endblock %}

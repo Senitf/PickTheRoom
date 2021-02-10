@@ -1,5 +1,7 @@
 from django.shortcuts import render
 from django.views import generic
+from django.http import HttpResponseRedirect
+from django.contrib import messages
 from room.forms import SearchForm
 from room.models import *
 
@@ -28,3 +30,13 @@ class SearchView(generic.View):
             'result' : result
         }
         return render(request, self.get_template_name, context)
+
+
+class ScrapListView(generic.ListView):
+    template_name = 'room/scrap.html'
+
+    def dispatch(self, request, *args, **kwargs):
+        if not request.user.is_authenticated:
+            messages.warning(request, '로그인이 필요합니다')
+            return HttpResponseRedirect('/accounts/login/')
+        return super(ScrapListView, self).dispatch(request, *args, **kwargs)

@@ -22,6 +22,7 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('', RedirectView.as_view(url='/room/', permanent=True)),
     path('room/', include('room.urls')),
+    path('accounts/', include('accounts.urls')),
 ]
 
 from django.conf import settings
