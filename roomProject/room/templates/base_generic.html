@@ -29,6 +29,11 @@
                 <ul class="navbar-nav">
                     {% if user.is_authenticated %}
                         <li class="nav-item">
+                            <div class="login nav-link">
+                                {{ user.first_name }}님
+                            </div>
+                        </li>
+                        <li class="nav-item">
                             <a class="login nav-link" href="{% url 'accounts:logout' %}">
                                 Logout
                                 <i class="fas fa-sign-out-alt"></i>

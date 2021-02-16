@@ -1,9 +1,16 @@
 {% extends "base_generic.html" %}
 {% block content %}
 <div class="wrapper position-relative">
-    <form method="post" class="accounts-container position-absolute top-50 start-50 translate-middle" action="{% url 'accounts:login' %}">
+    <form method="post" class="accounts-container position-absolute top-50 start-50 translate-middle overflow-auto" action="{% url 'accounts:login' %}">
         {% csrf_token %}
-        <h3 class="mb-3">Please Login.</h3>
+        <div class="row mb-3">
+            <div class="col-4">
+                <h4>Login</h4>
+            </div>
+            <div class="col-8 text-end">
+                <span>or <a href="{% url 'accounts:signup' %}">create a new account</a></span>
+            </div>
+        </div>
         {% include "form_errors.html" %}
         <div class="form-group mt-2">
             <label for="username">Username</label>
