@@ -52,6 +52,27 @@
     font-weight: 900;
 }
 
+/** Chrome **/
+input[type='range']::-webkit-slider-runnable-track {
+    background: rgba(0, 0, 0, 0.25);
+}
+
+/** Firefox **/
+input[type='range']::-moz-range-progress {
+    background: rgba(0, 0, 0, 0.25);
+}
+input[type='range']::-moz-range-track {
+    background: rgba(0, 0, 0, 0.25);
+}
+
+/** IE **/
+input[type='range']::-ms-fill-lower {
+    background: rgba(0, 0, 0, 0.25);
+}
+input[type='range']::-ms-fill-upper {
+    background: rgba(0, 0, 0, 0.25);
+}
+
 * {
     padding: 0;
     margin: 0;
@@ -125,8 +146,10 @@ body {
 
 .search-container {
     background-color: #ffffff;
-    opacity: 0.8;
+    background-color: rgba(255, 255, 255, 0.8);
     width: 70%;
+    max-height: 90%;
+    overflow: auto;
     border-radius: 30px;
     padding: 3% 6% 2% 6%;
 }
@@ -134,8 +157,10 @@ body {
 @media (max-width: 768px) {
     .search-container {
         background-color: #ffffff;
-        opacity: 0.8;
+        background-color: rgba(255, 255, 255, 0.8);
         width: 90%;
+        max-height: 90%;
+        overflow: auto;
         border-radius: 30px;
         padding: 3% 6% 2% 6%;
     }
@@ -161,10 +186,36 @@ body {
     font-size: 1.2rem;
 }
 
+/* result */
+.result-container {
+    background-color: transparent;
+    width: 30%;
+    border-radius: 30px;
+    margin: 1%;
+    padding: 1% 2%;
+}
+
+.room_name {
+    width: 100%;
+    height: 25%;
+    border-radius: 20px;
+    padding: 10% 6%;
+    font-size: 1.2rem;
+    font-weight: 600;
+    text-align: center;
+    background-color: rgba(13, 110, 253, 0.8);
+    color: white;
+}
+
+.info {
+    font-size: 0.9rem;
+    margin: 10% 2% 0;
+}
+
 /* accounts */
 .accounts-container {
     background-color: #ffffff;
-    opacity: 0.8;
+    background-color: rgba(255, 255, 255, 0.8);
     width: 500px;
     max-height: 90%;
     border-radius: 30px;

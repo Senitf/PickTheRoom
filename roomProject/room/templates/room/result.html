@@ -1,11 +1,50 @@
 {% extends "base_generic.html" %}
-
 {% block content %}
-    <ul>
-        <li>거리: {{ result.distance }}</li>
-        <li>가격: {{ result.price }}</li>
-        <li>교통: {{ result.traffic }}</li>
-        <li>상업시설: {{ result.facility }}</li>
-        <li>편의성: {{ result.usability }}</li>
-    </ul>
+<div class="wrapper position-relative">
+    <div class="search-container position-absolute top-50 start-50 translate-middle border border-dark border-4">
+        <div class="row justify-content-center mb-2">
+            <div class="name col mx-0 px-0 text-end">
+            {% if user.is_authenticated %}
+                {{ user.first_name }}
+            {% else %}
+                GUEST
+            {% endif %}
+            </div>
+            <div class="name-text col mx-0 ps-1 pt-2">님의 pick</div>
+        </div>
+
+        <div class="row justify-content-center mb-2">
+            <div class="col result-container justify-content-center border border-dark border-4">
+                <p class="text-center fs-5 fw-bold mb-2">1순위<i class="fas fa-star"></i></p>
+                <div class="room_name d-flex align-items-center justify-content-center">
+                    신라스테이 광화문
+                </div>
+                <div class="info">
+                    신라스테이 광화문은 5호선 광화문역 2번 출구에서 도보로 5분 거리에 있습니다. 가까운 도보 거리에 시청, 대사관, 서울 파이낸스 센터 등이 있어 비즈니스 여행객에...
+                    <a href="#">더보기</a>
+                </div>
+            </div>
+            <div class="col result-container justify-content-center border border-dark border-4">
+                <p class="text-center fs-5 fw-bold mb-2 position-relative">2순위<i class="fas fa-star position-absolute top-50 end-0 translate-middle-y"></i></p>
+                <div class="room_name d-flex align-items-center justify-content-center">
+                    글래드 강남 코엑스센터
+                </div>
+                <div class="info">
+                    글래드 강남 코엑스센터는 지하철 2호선 삼성역 1번 출구에서 도보로 단 1분 거리에 위치해 있습니다. 주변 관광지로는 코엑스몰과 무역센터가 도보로 10분 거리에 있...
+                    <a href="#">더보기</a>
+                </div>
+            </div>
+            <div class="col result-container justify-content-center border border-dark border-4">
+                <p class="text-center fs-5 fw-bold mb-2">3순위</p>
+                <div class="room_name d-flex align-items-center justify-content-center">
+                    L7 강남 바이 롯데
+                </div>
+                <div class="info">
+                    L7 강남 바이 롯데는 지하철 2호선 선릉역 10번 출구에서 도보 단 5분 거리에 위치해 있습니다. 세계문화유산으로 등록된 선릉과정릉은 도보 단 3분 거리에 있으며...
+                    <a href="#">더보기</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
 {% endblock %}
