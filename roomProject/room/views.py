@@ -9,6 +9,7 @@ from room.funcs import crawling
 class Index(generic.TemplateView):
     template_name = 'room/index.html'
 
+
 class SearchView(generic.View):
     post_template_name = 'room/result.html'
     get_template_name = 'room/search.html'
@@ -20,7 +21,6 @@ class SearchView(generic.View):
         context = {
             'result': result
         }
-        crawling('4호선 범계역')
         if form.is_valid():
             return render(request, self.post_template_name, context)
         else:

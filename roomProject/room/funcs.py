@@ -56,11 +56,13 @@ def get_html(url, _keyword):
     time.sleep(2)
     html.append(driver.page_source)
     time.sleep(2)
-    for i in range(1):
+    
+    while driver.find_elements_by_xpath("//a[@class='direction sp_hotel_bf next']"):
         element = driver.find_element_by_xpath("//a[@class='direction sp_hotel_bf next']").click()
         time.sleep(2)
         html.append(driver.page_source)
         time.sleep(2)
+
     #다음 페이지로 넘기면서 html 저장
     return html
 
