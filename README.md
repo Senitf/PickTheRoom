@@ -32,6 +32,8 @@ BestRoom은 여행을 계획하는 당신이 지낼 최고의 숙소를 추천�
 
 > 직관적인 검색, 추천 페이지와 저장 가능<br>
 
+## Screenshots
+
 > Home <br>
 <img src="https://user-images.githubusercontent.com/55660691/109514865-cff76e00-7ae9-11eb-867c-dec0b00f5199.png">
 > Search <br>
