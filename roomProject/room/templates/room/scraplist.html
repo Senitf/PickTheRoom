@@ -1,0 +1,35 @@
+{% extends "base_generic.html" %}
+{% block content %}
+<div class="wrapper position-relative">
+    <div class="search-container position-absolute top-50 start-50 translate-middle border border-dark border-4">
+        {% for room in scraplist %}
+            <div class="row room-container position-relative justify-content-center border border-dark border-4">
+                <a href="{% url 'room:scrap' room.id %}"><i class="fas fa-star position-absolute top-0 end-0 pt-3 pe-3 fs-3"></i></a>
+                <div class="col-4 justify-content-center">
+                    <div class="image d-flex align-items-center justify-content-center">
+                        {% if room.image == "" %}
+                            <img src="../../static/image/loading-img.jpg" alt="loading image">
+                        {% else %}
+                            <img src={{ room.image }} alt="room image">
+                        {% endif %}
+                    </div>
+                </div>
+                <div class="col-8 m-auto">
+                    <div class="rating">
+                        ★ {{ room.rating }}
+                    </div>
+                    <div class="title">
+                        {{ room.title }}
+                    </div>
+                    <div class="distance">
+                        <p class="mb-0"><i class="fas fa-map-marker-alt"></i> {{ room.distance }}</p>
+                    </div>
+                    <div class="charge">
+                        <p class="mb-0"><i class="fas fa-won-sign"></i> {{ room.charge }}</p>
+                    </div>
+                </div>
+            </div>    
+        {% endfor %}
+    </div>
+</div>
+{% endblock %}

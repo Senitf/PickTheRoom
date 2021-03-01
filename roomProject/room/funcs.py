@@ -56,13 +56,18 @@ def get_html(url, _keyword):
     time.sleep(2)
     html.append(driver.page_source)
     time.sleep(2)
-    
+
+    cnt = 0
+    '''
     while driver.find_elements_by_xpath("//a[@class='direction sp_hotel_bf next']"):
         element = driver.find_element_by_xpath("//a[@class='direction sp_hotel_bf next']").click()
         time.sleep(2)
         html.append(driver.page_source)
         time.sleep(2)
-
+        cnt = cnt + 1
+        if cnt == 2:
+            break
+    '''
     #다음 페이지로 넘기면서 html 저장
     return html
 
@@ -85,10 +90,13 @@ def parse_html(html):
             tmp = room_idx.find("em", {"class":"ng-binding"})
             _charge = tmp.text
 
-            pictmp = room_idx.find("div", {"class":"img_wrap"}).next_sibling
-            imgUrl = pictmp.find("img")
+            #pictmp = room_idx.find("div", {"class":"img_wrap"}).next_sibling
+            #imgUrl = pictmp.find("img")
 
-            if imgUrl != None:
+            pictmp = room_idx.find("div", {"class":"img_wrap"})
+            imgUrl = pictmp.find("img", {"class":""})
+
+            if imgUrl != None or imgUrl != -1:
                 _img = imgUrl['src']
             else:
                 _img = ''
@@ -102,7 +110,6 @@ def parse_html(html):
                         h.write(img)
             #이미지 폴더에 다운 받을 때
             '''
-
             room_list.append([_title, _rating, _distance, _charge, _img])
 
     return room_list
@@ -112,7 +119,7 @@ def crawling(_keyword):
 
     URL = 'https://hotel.naver.com/hotels/main'
     #sys.stdout = open('output.txt','w')
-    print(parse_html(get_html(URL, _keyword)))
+    return parse_html(get_html(URL, _keyword))
     #따로 출력을 텍스트파일로 만들고 싶을때 주석 해제
 
     #return parse_html(get_html(URL, _keyword))
@@ -120,12 +127,12 @@ def crawling(_keyword):
 
 
 def set_weight(_input):
-    weight_li = [0, 0, 0, 0, 0]
-    dic = {0 :_input[0], 1 :_input[1], 2 :_input[2], 3 :_input[3], 4 :_input[4]}
-    dic.sort()
+    weight_li = [0, 0, 0]
+    dic = {0 :_input[0], 1 :_input[1], 2 :_input[2]}
+    dic = sorted(dic.items(), key=(lambda x:x[1]))
     weight = 0.1
-    for idx in dic.keys:
-        weight_li[idx] = weight
+    for idx in dic:
+        weight_li[idx[0]] = weight
         weight = weight + 0.2
     return weight_li
 #기준 별 가중치 설정
@@ -142,7 +149,7 @@ def calc(_weight, _input):
     for i in _input:
         _sum = _sum + i
     calc_val = 0
-    for i in range(5):
+    for i in range(3):
         calc_val = calc_val + _weight[i] * (_input[i] / _sum)
     return calc_val
 #SAW 알고리즘 적용한 결과 계산
