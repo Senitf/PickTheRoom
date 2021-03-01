@@ -4,9 +4,11 @@ from django.http import HttpResponseRedirect
 from django.contrib import messages
 from room.forms import SearchForm
 from room.models import *
+from room.funcs import crawling
 
 class Index(generic.TemplateView):
     template_name = 'room/index.html'
+
 
 class SearchView(generic.View):
     post_template_name = 'room/result.html'
