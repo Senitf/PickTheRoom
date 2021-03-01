@@ -14,14 +14,26 @@
                 </div>
                 <div class="name-text col mx-0 ps-1 pt-2">님의 pick</div>
             </div>
+            <select class="form-select mb-2" name="region" id="region" aria-label="region">
+                <option selected value="서울">서울</option>
+                <option value="경기">경기</option>
+                <option value="강원">강원</option>
+                <option value="충북">충북</option>
+                <option value="충남">충남</option>
+                <option value="전북">전북</option>
+                <option value="전남">전남</option>
+                <option value="경북">경북</option>
+                <option value="경남">경남</option>
+                <option value="제주">제주</option>
+            </select>
             <p class="help-text">더 중요하게 생각하는 조건을 슬라이드 해주세요.</p>
             <div class="row mb-2">
-                <div class="search-label col-4 fw-bolder ">
+                <div class="search-label col-4 fw-bolder">
                     <label for="distance">
                         거리<i
                             id="popover1"
                             class="far fa-question-circle ms-2"
-                            data-bs-content="주요 관광지까지의 거리">
+                            data-bs-content="버스정류장, 지하철역, 터미널 등과의 거리">
                         </i>
                     </label>
                 </div>
@@ -40,7 +52,7 @@
     
             <div class="row mb-2">
                 <div class="search-label col-4 fw-bolder">
-                    <label for="price">
+                    <label for="charge">
                         가격<i
                             id="popover2"
                             class="far fa-question-circle ms-2"
@@ -51,8 +63,8 @@
                 <div class="col-8">
                     <input
                         type="range"
-                        name="price"
-                        id="price"
+                        name="charge"
+                        id="charge"
                         min="0"
                         max="5"
                         value="0"
@@ -63,65 +75,19 @@
     
             <div class="row mb-2">
                 <div class="search-label col-4 fw-bolder">
-                    <label for="traffic">
-                        교통<i
+                    <label for="rating">
+                        평점<i
                         id="popover3"
                         class="far fa-question-circle ms-2"
-                        data-bs-content="버스정류장, 지하철역, 터미널 등과의 거리">
+                        data-bs-content="숙박 시설의 총 평점">
                         </i>
                     </label>
                 </div>
                 <div class="col-8">
                     <input
                         type="range"
-                        name="traffic"
-                        id="traffic"
-                        min="0"
-                        max="5"
-                        value="0"
-                        class="form-range"
-                    />
-                </div>
-            </div>
-    
-            <div class="row mb-2">
-                <div class="search-label col-4 fw-bolder">
-                    <label for="facility">
-                        상업시설<i
-                        id="popover4"
-                        class="far fa-question-circle ms-2"
-                        data-bs-content="마트, 편의점, 가게 등과의 거리">
-                        </i>
-                    </label>
-                </div>
-                <div class="col-8">
-                    <input
-                        type="range"
-                        name="facility"
-                        id="facility"
-                        min="0"
-                        max="5"
-                        value="0"
-                        class="form-range"
-                    />
-                </div>
-            </div>
-    
-            <div class="row mb-2">
-                <div class="search-label col-4 fw-bolder">
-                    <label for="usability">
-                        편의성<i
-                        id="popover5"
-                        class="far fa-question-circle ms-2"
-                        data-bs-content="노키즈존, 24시간 프런트, 흡연공간 등">
-                        </i>
-                    </label>
-                </div>
-                <div class="col-8">
-                    <input
-                        type="range"
-                        name="usability"
-                        id="usability"
+                        name="rating"
+                        id="rating"
                         min="0"
                         max="5"
                         value="0"
@@ -156,20 +122,6 @@
         placement: 'right',
     });
     var popover3 = new bootstrap.Popover(document.getElementById('popover3'), {
-        trigger: 'hover',
-        container: 'body',
-        toggle: 'popover',
-        trigger: 'hover',
-        placement: 'right',
-    });
-    var popover4 = new bootstrap.Popover(document.getElementById('popover4'), {
-        trigger: 'hover',
-        container: 'body',
-        toggle: 'popover',
-        trigger: 'hover',
-        placement: 'right',
-    });
-    var popover5 = new bootstrap.Popover(document.getElementById('popover5'), {
         trigger: 'hover',
         container: 'body',
         toggle: 'popover',

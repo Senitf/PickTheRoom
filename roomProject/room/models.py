@@ -1,22 +1,23 @@
 from django.db import models
+from django.contrib.auth.models import User
 
 class Room(models.Model):
     REGION_CHOICES = (
         ('서울', '서울'),
-        ('경기', '경기도'),
-        ('강원', '강원도'),
-        ('충남', '충청남도'),
-        ('충북', '충청북도'),
-        ('전남', '전라남도'),
-        ('전북', '전라북도'),
-        ('제주', '제주도'),
+        ('경기', '경기'),
+        ('강원', '강원'),
+        ('충남', '충남'),
+        ('충북', '충북'),
+        ('전남', '전남'),
+        ('전북', '전북'),
+        ('제주', '제주'),
     )
-    region = models.CharField(max_length=5, choices=REGION_CHOICES, null=True)
-    title = models.CharField(max_length=100, default="")
+    region = models.CharField(max_length=5, choices=REGION_CHOICES, blank=True)
+    title = models.CharField(max_length=100, blank=True)
     rating = models.FloatField(default=0.0)
-    distance = models.FloatField(default=0.0)
+    distance = models.CharField(max_length=100, blank=True)
     charge = models.IntegerField(default=0)
-    image = models.CharField(max_length=200, default="")
+    image = models.CharField(max_length=200, blank=True)
 
     #1~5까지의 값
     distance_score = models.IntegerField(default=0)
@@ -25,8 +26,10 @@ class Room(models.Model):
 
     SAW_score = models.FloatField(default=0)
 
+    scrap = models.ManyToManyField(User, related_name='scrap', blank=True)
+
     def __str__(self):
         return self.title
 
     class Meta:
-        ordering = ['-SAW_score', 'title']
+        ordering = ['region', '-SAW_score', 'title']

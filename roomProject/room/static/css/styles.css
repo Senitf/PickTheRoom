@@ -151,7 +151,7 @@ body {
     max-height: 90%;
     overflow: auto;
     border-radius: 30px;
-    padding: 3% 6% 2% 6%;
+    padding: 2% 6% 2% 6%;
 }
 
 @media (max-width: 768px) {
@@ -162,7 +162,7 @@ body {
         max-height: 90%;
         overflow: auto;
         border-radius: 30px;
-        padding: 3% 6% 2% 6%;
+        padding: 2% 6% 2% 6%;
     }
 }
 
@@ -195,21 +195,38 @@ body {
     padding: 1% 2%;
 }
 
-.room_name {
-    width: 100%;
-    height: 25%;
-    border-radius: 20px;
-    padding: 10% 6%;
-    font-size: 1.2rem;
-    font-weight: 600;
-    text-align: center;
-    background-color: rgba(13, 110, 253, 0.8);
-    color: white;
+.rating {
+    color: red;
+    font-size: 0.9rem;
 }
 
-.info {
+.title {
+    font-size: 1.2rem;
+    font-weight: 700;
+}
+
+.distance {
+    color: #547bc0;
     font-size: 0.9rem;
-    margin: 10% 2% 0;
+    font-weight: 500;
+}
+
+.charge {
+    font-size: 0.9rem;
+    font-weight: 500;
+}
+
+.nonvisible {
+    display: none;
+}
+
+/* scrap */
+.room-container {
+    background-color: transparent;
+    width: 100%;
+    border-radius: 30px;
+    margin: 1%;
+    padding: 1% 2%;
 }
 
 /* accounts */
