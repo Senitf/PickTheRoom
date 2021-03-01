@@ -32,6 +32,15 @@ BestRoom은 여행을 계획하는 당신이 지낼 최고의 숙소를 추천�
 
 > 직관적인 검색, 추천 페이지와 저장 가능<br>
 
+## REFERENCES
+
+Comparison of Multi Criteria Decision Making Algorithms for Ranking Cloud Renderfarm Services<br>
+https://arxiv.org/pdf/1611.10204.pdf<br>
+Comparison Topsis And Saw Method In The Selection Of Tourism Destination In Indonesia <br>
+https://repository.bsi.ac.id/index.php/unduh/item/229018/Paper-231.pdf <br>
+Tourism Trend Mapping Based on Social Media Using SAW Algorithm<br>
+https://iopscience.iop.org/article/10.1088/1742-6596/1140/1/012041/pdf<br>
+
 
 ## Show your support
 
