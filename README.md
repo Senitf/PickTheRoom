@@ -23,8 +23,6 @@ BestRoom은 여행을 계획하는 당신이 지낼 최고의 숙소를 추천�
 당신의 선택에대해 고민하는  PickTheRoom 은 최적의 숙소를 추천합니다<br>
 <br>
 
-> main page <br>
-<img src="https://user-images.githubusercontent.com/30287999/91279536-95221f80-e7c0-11ea-9f90-f9695a3b5dbd.png">
 
 ## Features
 
