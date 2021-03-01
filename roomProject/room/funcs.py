@@ -85,8 +85,8 @@ def parse_html(html):
             tmp = room_idx.find("em", {"class":"ng-binding"})
             _charge = tmp.text
 
-            pictmp = room_idx.find("div", {"class":"img_wrap"}).next_sibling
-            imgUrl = pictmp.find("img")
+            pictmp = room_idx.find("div", {"class":"img_wrap"})
+            imgUrl = pictmp.find("img", {"class":"ng-hide"}).next_sibiling
 
             if imgUrl != None:
                 _img = imgUrl['src']
@@ -156,4 +156,16 @@ user A
 2
 '''
 
-print(crawling('4호선 범계역'))
+from .models import Room
+
+def createNewContent(room_list):
+    for idx in room_list:
+        new_content = Room()
+        new_content.title = idx[0]
+        new_content.rating = idx[1]
+        new_content.distance = idx[2]
+        new_content.charge = idx[3]
+        new_content.image = idx[4]
+        new_content.save()
+
+createNewContent(crawling('4호선 범계역'))
