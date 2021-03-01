@@ -52,7 +52,7 @@ def get_html(url, _keyword):
     time.sleep(2) 
     html.append(driver.page_source)
     time.sleep(2)
-    for i in range(10):
+    for i in range(0):
         element = driver.find_element_by_xpath("//a[@class='direction sp_hotel_bf next']").click()
         time.sleep(2)
         html.append(driver.page_source)
@@ -121,7 +121,8 @@ def set_weight(_input):
 hotel A
 0.2 km 4 
 150000 2 -> 0 - 1 weight // reverse sort() -> 0.1 0.3 0.5 0.7 0.9
-평점(8) 4   
+평점(8) 4 
+if dataA = ""  
 '''
 
 def calc(_weight, _input):
@@ -141,3 +142,5 @@ user A
 3
 2
 '''
+
+print(crawling('4호선 범계역'))
