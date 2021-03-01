@@ -4,6 +4,7 @@ from django.http import HttpResponseRedirect
 from django.contrib import messages
 from room.forms import SearchForm
 from room.models import *
+from room.funcs import crawling
 
 class Index(generic.TemplateView):
     template_name = 'room/index.html'
@@ -19,6 +20,7 @@ class SearchView(generic.View):
         context = {
             'result': result
         }
+        crawling('4호선 범계역')
         if form.is_valid():
             return render(request, self.post_template_name, context)
         else:
