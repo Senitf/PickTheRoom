@@ -32,6 +32,21 @@ BestRoom은 여행을 계획하는 당신이 지낼 최고의 숙소를 추천�
 
 > 직관적인 검색, 추천 페이지와 저장 가능<br>
 
+> 1 <br>
+<img src="https://user-images.githubusercontent.com/55660691/109513726-bdc90000-7ae8-11eb-9acb-2b17e5db670d.png">
+> 2 <br>
+<img src="https://user-images.githubusercontent.com/55660691/109513755-c3264a80-7ae8-11eb-9fd2-fb65474d35c3.png">
+> 3 <br>
+<img src="https://user-images.githubusercontent.com/55660691/109513759-c4577780-7ae8-11eb-98ab-ccf47271e96a.png">
+> 4 <br>
+<img src="https://user-images.githubusercontent.com/55660691/109513768-c588a480-7ae8-11eb-93ba-219e6c39e2fe.png">
+> 5 <br>
+<img src="https://user-images.githubusercontent.com/55660691/109513772-c6b9d180-7ae8-11eb-886d-d4296136b885.png">
+> 6 <br>
+<img src="https://user-images.githubusercontent.com/55660691/109513778-c7526800-7ae8-11eb-98c9-909970e3f895.png">
+> 7 <br>
+<img src="https://user-images.githubusercontent.com/55660691/109513782-c7eafe80-7ae8-11eb-8d26-72c79e88caf4.png">
+
 ## REFERENCES
 
 Comparison of Multi Criteria Decision Making Algorithms for Ranking Cloud Renderfarm Services<br>
