@@ -84,17 +84,24 @@ def parse_html(html):
             _charge = tmp.text
 
             pictmp = room_idx.find("div", {"class":"img_wrap"}).next_sibling
-            try:
-                imgUrl = pictmp.find("img")['src']
-                with urlopen(imgUrl) as f:
+            imgUrl = pictmp.find("img")
+
+            if imgUrl != None:
+                _img = imgUrl['src']
+            else:
+                _img = ''
+            #이미지 url만 저장
+
+            '''
+            if imgUrl != None:
+                with urlopen(imgUrl['src']) as f:
                     with open('./room/img/' + _title +'.jpg','wb') as h:
                         img = f.read() #이미지 읽기
                         h.write(img)
-            except TypeError as e:
-                return None
+            #이미지 폴더에 다운 받을 때
+            '''
 
-            #이미지 관련 코드, 필요할 시 주석 해제
-            room_list.append([_title, _rating, _distance, _charge])
+            room_list.append([_title, _rating, _distance, _charge, _img])
 
     return room_list
 #원하는 정보 뽑아서 찾는 과정
