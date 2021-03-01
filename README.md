@@ -32,22 +32,27 @@ BestRoom은 여행을 계획하는 당신이 지낼 최고의 숙소를 추천�
 
 > 직관적인 검색, 추천 페이지와 저장 가능
 
-<br><br>
+<br>
 
 ## Preview
 
 > Home <br>
-<img src="https://user-images.githubusercontent.com/55660691/109514865-cff76e00-7ae9-11eb-867c-dec0b00f5199.png">
+<img src="https://user-images.githubusercontent.com/55660691/109514865-cff76e00-7ae9-11eb-867c-dec0b00f5199.png"> <br>
+
 > Search <br>
-<img src="https://user-images.githubusercontent.com/55660691/109514875-d1c13180-7ae9-11eb-8ed6-64845f044b2d.png">
+<img src="https://user-images.githubusercontent.com/55660691/109514875-d1c13180-7ae9-11eb-8ed6-64845f044b2d.png"> <br>
+
 > Result <br>
-<img src="https://user-images.githubusercontent.com/55660691/109514881-d38af500-7ae9-11eb-83f2-61cb239cc27e.png">
+<img src="https://user-images.githubusercontent.com/55660691/109514881-d38af500-7ae9-11eb-83f2-61cb239cc27e.png"> <br>
+
 > Bookmark <br>
-<img src="https://user-images.githubusercontent.com/55660691/109514876-d2f25e80-7ae9-11eb-9c09-67c30895aa20.png">
+<img src="https://user-images.githubusercontent.com/55660691/109514876-d2f25e80-7ae9-11eb-9c09-67c30895aa20.png"> <br>
+
 > Crwaling <br>
-<img src="https://user-images.githubusercontent.com/55660691/109514846-cb32ba00-7ae9-11eb-82d1-fb8eb9adf717.png">
+<img src="https://user-images.githubusercontent.com/55660691/109514846-cb32ba00-7ae9-11eb-82d1-fb8eb9adf717.png"> <br>
+
 > Login <br>
-<img src="https://user-images.githubusercontent.com/55660691/109514883-d4238b80-7ae9-11eb-9f82-6b9e4d1efe37.png">
+<img src="https://user-images.githubusercontent.com/55660691/109514883-d4238b80-7ae9-11eb-9f82-6b9e4d1efe37.png"> <br>
 
 
 ## REFERENCES
